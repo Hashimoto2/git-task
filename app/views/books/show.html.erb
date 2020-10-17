@@ -1,0 +1,21 @@
+<div class="notice1">
+  <p id="notice">
+    <%= notice %>
+  </p>
+</div>
+<p class="show-1">
+  <strong>Title:</strong>
+  <%= @book.title %>
+</p>
+
+<p class="show-2">
+  <strong>Body:</strong>
+  <%= @book.body %>
+</p>
+
+<p>
+  <%= link_to("Edit","/books/#{@book.id}/edit") %>
+  |
+  <a href="/books">Back</a>
+</p>
+

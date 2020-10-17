@@ -1,0 +1,138 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#notice {
+    color: green;
+}
+
+.p1 {
+  margin: 35px;
+}
+
+.p2 {
+  margin: 35px;
+}
+
+.a1 {
+  margin:35px;
+}
+
+head {
+  display: none;
+}
+
+body {
+  background-color: #fff;
+  color:#333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+  display: block;
+}
+
+td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 2px;
+}
+
+table {
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  border-spacing: 10px;
+  border-color: grey;
+  margin: 2px;
+}
+
+.title {
+  margin-bottom: 15px;
+}
+
+.form1 {
+  margin-bottom: 10px;
+}
+
+.form2 {
+  margin-bottom: 10px;
+}
+
+.title2 {
+  margin-top: 20px;
+}
+
+.title3 {
+  margin-top: 10px;
+}
+
+.Update {
+  margin-top: 9px;
+}
+
+.show-1 {
+  font-family: verdana, arial, helvetica, sans-serif;
+  margin: 30px;
+  background-color: #fff;
+  color:#333;
+  font-size: 13px;
+  line-height: 18px;
+  display: block;
+}
+
+.show-2 {
+  font-family: verdana, arial, helvetica, sans-serif;
+  margin: 30px;
+  background-color: #fff;
+  color:#333;
+  font-size: 13px;
+  line-height: 18px;
+  display: block;
+}
+
+.field {
+  margin-top:10px;
+  margin-left: 3px;
+  line-height: 20px;
+}
+
+label {
+  display: block;
+}
+
+.notifications {
+  color: black;
+}
+
+.actions {
+  margin-top: 10px;
+  margin-left: 3px;
+  margin-bottom: 10px;
+}
+.notice1 {
+  margin-left:30px;
+}
+
+.heading {
+  margin-bottom: 10px;
+}
