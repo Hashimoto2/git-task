@@ -1,0 +1,26 @@
+<div class="body">
+  <div class="container">
+      <h2>User info</h2>
+      <%= form_with(model: @user, local: true) do |f| %>
+      <% if @user.errors.any? %>
+      <div class="notifications">
+        <div class="notice"><%= @user.errors.count %>errors prohibited this obj from being saved:</div>
+      </div>
+        <div class="alert alert-warning">
+          <ul>
+            <% @user.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+      </div>
+      <% end %>
+      <h4 class="title33">Name</h4>
+      <%= f.text_field :name, class: "name1" %>
+      <h4 class="opinion1">Image</h4>
+      <%= f.attachment_field :profile_image, placeholder: "プロフィール画像", class: "user-edit-form" %>
+      <h4 class="opinion33">Introduction</h4>
+      <%= f.text_area :introduction, class: "introduction1" %>
+      <%= f.submit 'Update User' %>
+      <% end %>
+  </div>
+</div>
