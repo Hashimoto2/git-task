@@ -13,7 +13,7 @@
                 </tr>
                 <tr>
     	            <th>introduction</th>
-    	            <th></th>
+    	            <th><%= @user.introduction %></th>
                 </tr>
               </tbody>
             </table>
@@ -38,24 +38,26 @@
                       <h4 class="title1">Title</h4>
                       <%= f.text_field :title, class: "title11"%>
                       <h4 class="opinion1">Opinion</h4>
-                      <%= f.text_area :opinion, class: "opinion11" %>
+                      <%= f.text_area :body, class: "opinion11" %>
                       <%= f.submit 'Create Book',class: "box1" %>
                   <% end %>
       </div>
       <div class="col-xs-9">
         <h2>Books</h2>
         <table class="table table-hover table-inverse">
+          <thead>
             <tr>
-              <th></th>
-              <th>Title</th>
-              <th>Opinion</th>
+              <th class="th1"></th>
+              <th class="th1">Title</th>
+              <th class="th1">Opinion</th>
               <th colspan="3"></th>
             </tr>
+          </thead>
             <% @books.each do |book| %>
             <tr>
               <td><%= attachment_image_tag @user, :profile_image, format: 'jpeg', fallback: "no_image.jpg", size: "40x40" %></td>
-              <td><%= book.title %></td>
-              <td><%= book.opinion %></td>
+              <td><%= link_to book.title, book_path(book)%></td>
+              <td><%= book.body %></td>
             </tr>
             <% end %>
         </table>

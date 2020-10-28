@@ -13,7 +13,7 @@
                 </tr>
                 <tr>
     	            <th>introduction</th>
-    	            <th></th>
+    	            <th><%= @user.introduction %></th>
                 </tr>
               </tbody>
             </table>
@@ -37,19 +37,21 @@
               <h4 class="title1">Title</h4>
                 <div><%= f.text_field :title, class: "title12"%></div>
                   <h4 class="opinion1">Opinion</h4>
-                    <div><%= f.text_area :opinion, class: "opinion12" %></div>
+                    <div><%= f.text_area :body, class: "opinion12" %></div>
                       <%= f.submit 'Create Book',class: "box2" %>
             <% end %>
           </diV>
       </div>
         <div class="col-xs-9">
-          <table class="table table-striped">
+          <table class="table">
+            <thead>
               <h2>Users</h2>
               <tr>
                 <th>image</th>
                 <th>name</th>
                 <th colspan="3"></th>
               </tr>
+            </thead>
                 <% @users.each do |user| %>
                 <tr>
                   <td><%= attachment_image_tag user, :profile_image, format: 'jpeg', fallback: "no_image.jpg", size: "40x40" %></td>
