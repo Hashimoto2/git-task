@@ -53,7 +53,7 @@ header .navbar-left span {
 }
 
 .body {
-  margin-top: 51px;
+  margin-top: 50px;
 }
 
 body {
@@ -73,12 +73,9 @@ body {
 
 #notice {
   color: green;
+  margin-left: 200px;
+  margin-top: 50px;
 }
-
-p {
-  margin: 0 0 10px;
-}
-
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -203,7 +200,7 @@ a {
 }
 
 .body {
-  margin-top: 51px;
+  margin-top: 30px;
 }
 
 .col-xs-3 {
@@ -241,8 +238,6 @@ a {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  display: flex;
-  position: right;
 }
 
 div {
@@ -290,16 +285,14 @@ table {
   border-radius: 4px;
 }
 
-.table>thead>tr>th {
+.th1 {
   vertical-align: bottom;
   border-bottom: 2px solid #ddd;
   padding: 8px;
   line-height: 1.42857143;
-}
-
-th {
   text-align: left;
   width: 350px;
+  border-top: 0;
 }
 
 td {
@@ -344,4 +337,8 @@ td {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
   display: inline-block;
+}
+
+.mainbox {
+  margin-top: 55px;
 }
