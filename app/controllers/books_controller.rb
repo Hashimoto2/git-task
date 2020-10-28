@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-
+  before_action :authenticate_user!
 
   def index
     @books = Book.all
@@ -23,7 +23,8 @@ class BooksController < ApplicationController
     @book = Book.new(book_params)
     @book.user_id = current_user.id
     if @book.save
-      redirect_to book_path(@book), notice: `You have creatad book successfully.`
+      flash[:notice] = "You have creatad book successfully."
+      redirect_to book_path(@book)
     else
       @books = Book.all
       flash.now[:alert] = 'メッセージを入力してください。'
@@ -33,12 +34,16 @@ class BooksController < ApplicationController
 
   def edit
     @book = Book.find(params[:id])
+    if @book.user!= current_user
+      redirect_to books_path
+    end
   end
 
   def update
     @book = Book.find(params[:id])
     if @book.update(book_params)
-      redirect_to book_path(@book), notice: `You have updated book successfully.`
+      flash[:notice] = "You have updated book successfully."
+      redirect_to book_path(@book)
     else
       @books = Book.all
       flash.now[:alert] = 'メッセージを入力してください。'
@@ -53,7 +58,7 @@ class BooksController < ApplicationController
 
   private
   def book_params
-    params.require(:book).permit(:title, :opinion)
+    params.require(:book).permit(:title, :body)
   end
 
 end

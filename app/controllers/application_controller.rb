@@ -11,5 +11,16 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: [:email])
   end
 
+  def new
+    @devise.new
+    flash[:notice] = "Signed out successfully."
+    redirect_to new_user_registration_path
+  end
+
+  def create
+    @devise.save
+    flash[:notice] = "Signed in successfully."
+    redirect_to user_session_path
+  end
 
 end
